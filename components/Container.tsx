@@ -1,9 +1,15 @@
-import { SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const Container = ({ children }: { children: React.ReactNode }) => {
-  return <SafeAreaView className={styles.container}>{children}</SafeAreaView>;
+interface ContainerProps {
+  children?: React.ReactNode;
+}
+
+const Container = ({ children }: ContainerProps) => {
+  return <SafeAreaView style={{ flex: 1 }}>{children}</SafeAreaView>;
 };
 
-const styles = {
-  container: 'flex flex-1 m-6',
-};
+export default Container;
+
+const styles = StyleSheet.create({});

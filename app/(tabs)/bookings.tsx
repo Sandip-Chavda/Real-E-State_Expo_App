@@ -1,14 +1,15 @@
-import { Stack } from 'expo-router';
-
 import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 import Container from '~/components/Container';
 
-export default function Home() {
+const BookingsScreen = () => {
   return (
     <Container>
-      <Text className="text-primary text-2xl font-bold">Home</Text>
+      <Text>Bookings Screen</Text>
     </Container>
   );
-}
+};
+
+export default BookingsScreen;
 
 const styles = StyleSheet.create({});
