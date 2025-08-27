@@ -12,10 +12,11 @@ web-build/
 # expo router
 expo-env.d.ts
 
+.env
+.env.local
 
-
-ios
-android
+ios/
+android/
 
 # macOS
 .DS_Store
