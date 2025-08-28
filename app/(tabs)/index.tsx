@@ -2,11 +2,15 @@ import { Stack } from 'expo-router';
 
 import { StyleSheet, Text, View } from 'react-native';
 import Container from '~/components/Container';
+import Image from '~/components/Image';
+import Typo from '~/components/Text';
 
 export default function Home() {
   return (
     <Container>
-      <Text className="text-primary text-2xl font-bold">Home</Text>
+      <Typo variant="title">Title</Typo>
+
+      <Image source="https://images.pexels.com/photos/31002073/pexels-photo-31002073.jpeg" />
     </Container>
   );
 }
