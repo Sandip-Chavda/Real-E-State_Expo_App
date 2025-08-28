@@ -13,6 +13,7 @@ export default function Home() {
       <FlatList
         keyExtractor={(item) => item.id}
         data={PROPERTIES}
+        showsVerticalScrollIndicator={false}
         renderItem={({ item }) => {
           return <Card property={item} />;
         }}
