@@ -1,16 +1,22 @@
-import { Stack } from 'expo-router';
-
-import { StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, Text, View } from 'react-native';
 import Container from '~/components/Container';
+import Card from '~/components/home/Card';
 import Image from '~/components/Image';
 import Typo from '~/components/Text';
+import { PROPERTIES } from '~/core/constants/data';
 
 export default function Home() {
   return (
     <Container>
-      <Typo variant="title">Title</Typo>
+      <Typo variant="title">Home</Typo>
 
-      <Image source="https://images.pexels.com/photos/31002073/pexels-photo-31002073.jpeg" />
+      <FlatList
+        keyExtractor={(item) => item.id}
+        data={PROPERTIES}
+        renderItem={({ item }) => {
+          return <Card property={item} />;
+        }}
+      />
     </Container>
   );
 }

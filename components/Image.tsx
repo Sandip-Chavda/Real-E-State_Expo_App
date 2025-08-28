@@ -10,6 +10,7 @@ type ImageProps = {
 const defaultStyles: ImageStyle = {
   width: '100%',
   height: '100%',
+  // height: 200,
   borderRadius: 16,
 };
 

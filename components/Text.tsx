@@ -30,7 +30,7 @@ const variantStyles: Record<TypographyVariant, string> = {
   display: 'text-3xl font-bold',
 };
 
-const Typo = ({ className, variant = 'title', children, ...props }: TypoProps) => {
+const Typo = ({ className, variant = 'body', children, ...props }: TypoProps) => {
   const textStyle = twMerge('text-black', variantStyles[variant], className);
 
   return (
