@@ -44,8 +44,17 @@ const Discovery = ({ properties }: DiscoveryProps) => {
               preserveSmoothing
               borderRadius={24}
               style={{ position: 'absolute', bottom: 16, left: 24, right: 24, overflow: 'hidden' }}>
-              <BlurView intensity={60} tint="dark">
-                <Pressable className="flex flex-row items-center justify-between p-4">
+              <BlurView intensity={80} tint="dark">
+                <Pressable
+                  onPress={() => {
+                    router.navigate({
+                      pathname: `/properties/[id]`,
+                      params: {
+                        id: item.id,
+                      },
+                    });
+                  }}
+                  className="flex flex-row items-center justify-between p-4">
                   <View>
                     <Typo numberOfLines={1} variant="caption" className="text-white">
                       {item.name}

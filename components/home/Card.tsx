@@ -19,16 +19,17 @@ const Card = ({ property }: CardProps) => {
         </View>
         <View className="">
           <BlurView
-            intensity={100}
+            intensity={70}
+            tint="light"
             className="absolute bottom-4 left-8 flex flex-row items-center overflow-hidden rounded-xl p-2 ">
             <Ionicons name="star" color={'#facc15'} size={24} />
             <Typo className="mx-2 text-white">4.9</Typo>
           </BlurView>
           <Pressable className="absolute bottom-4 right-8">
-            <BlurView intensity={100} className="overflow-hidden rounded-2xl p-2">
+            <BlurView intensity={70} tint="light" className="overflow-hidden rounded-2xl p-2">
               <Ionicons
                 name={property.is_favorite ? 'heart' : 'heart-outline'}
-                color={'#ef4444'}
+                color={COLORS.primary}
                 size={24}
               />
             </BlurView>
