@@ -4,6 +4,7 @@ import ImageWithSquircle from '../ImageWithSquircle';
 import { BlurView } from 'expo-blur';
 import Typo from '../Text';
 import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 
 type DiscoveryProps = {
   properties: Property[];
@@ -21,6 +22,9 @@ const Discovery = ({ properties }: DiscoveryProps) => {
         style={{
           paddingVertical: 16,
           paddingHorizontal: 24,
+        }}
+        onPress={() => {
+          router.navigate('/search');
         }}>
         <Ionicons name="search" size={24} color={'gray'} />
         <View className="mx-4 ">
