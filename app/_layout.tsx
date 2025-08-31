@@ -1,4 +1,5 @@
 import { ThemeProvider } from '@react-navigation/native';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 import '../global.css';
 
 import { Stack } from 'expo-router';
@@ -15,7 +16,9 @@ export const unstable_settings = {
 const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <ThemeProvider value={theme}>{children}</ThemeProvider>
+      <ThemeProvider value={theme}>
+        <BottomSheetModalProvider>{children}</BottomSheetModalProvider>
+      </ThemeProvider>
     </GestureHandlerRootView>
   );
 };
