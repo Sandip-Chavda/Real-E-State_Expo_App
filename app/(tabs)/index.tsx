@@ -10,7 +10,7 @@ import { PROPERTIES } from '~/core/constants/data';
 export default function Home() {
   useEffect(() => {
     setTimeout(() => {
-      router.push('/login');
+      router.push('/welcome');
     }, 2500);
   }, []);
 

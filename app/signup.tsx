@@ -85,5 +85,3 @@ const SignUpScreen = () => {
 };
 
 export default SignUpScreen;
-
-const styles = StyleSheet.create({});
