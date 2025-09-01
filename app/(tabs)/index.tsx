@@ -1,13 +1,19 @@
+import { router } from 'expo-router';
+import { useEffect } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import Container from '~/components/Container';
 import Card from '~/components/home/Card';
 import Discovery from '~/components/home/Discovery';
 import MainHeader from '~/components/home/MainHeader';
-import Image from '~/components/Image';
-import Typo from '~/components/Text';
 import { PROPERTIES } from '~/core/constants/data';
 
 export default function Home() {
+  useEffect(() => {
+    setTimeout(() => {
+      router.push('/login');
+    }, 2500);
+  }, []);
+
   return (
     <Container>
       <MainHeader />
